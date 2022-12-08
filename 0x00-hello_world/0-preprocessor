@@ -3,14 +3,16 @@
 
 
 
-main()
+int main(void)
 
 {
 
-  printf("hello, ");
+		printf("Programming is fun.\n");
 
-  printf("world");
+			printf("And programming in C is even more fun.\n");
 
-  printf("\n");
 
-}
+
+				return 0;
+
+			}
