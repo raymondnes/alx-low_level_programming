@@ -1,6 +1,10 @@
 #!/bin/bash
 #include <stdio.h>
-#include <stdlib.h>
+
+/**
+*main - Entry point
+*Retun - Always 0 (success)
+*/
 
 int main(void)
 
