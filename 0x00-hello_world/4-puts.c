@@ -1,13 +1,6 @@
 #!/bin/bash
-/**
- *
- *  * main - Entry point
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 
