@@ -3,7 +3,7 @@
 /**
  * main - returns alphabeth both e and q
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)	
 {
