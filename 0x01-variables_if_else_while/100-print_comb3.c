@@ -19,8 +19,7 @@ int main(void)
 			if (!((ones == tens || (tens > ones))))/* eliminates
 							       * repetition
 							       */
-			{
-			
+			{			
 				putchar(tens);
 				putchar(ones);
 				if (!(ones == '9' && tens == '8'))/* adds comma
