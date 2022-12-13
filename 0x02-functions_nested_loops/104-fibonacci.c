@@ -1,63 +1,49 @@
 #include <stdio.h>
 
-
 /**
- * numlength - returns the length of strings
- * @num : operand number
- * Return: number of digits
- */
-
-int numLength(int num)
-{
-	int length = 0;
-
-	if(!num)
-	{
-		return(1);
-	}
-
-	while (num)
-	{
-		num = num / 10;
-		length += 1;
-	}
-
-	return (length);
-}
-/**
- *  *main - prints the first 98 fibonaci sequences
- *  Return: 0;
+ * main - print first 98 Fibonacci numbers without using long long, malloc,
+ * pointers, array/tables, or structures
+ * Return: 0
  */
 
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f20 = 0, tmpo = 0;
-	short int i = 1, initial0s;
+	int counter, overflow;
+	unsigned long a = 1;
+	unsigned long b = 1;
+	unsigned long sum = 0;
+	long a_head, a_tail, b_head, b_tail, sum_head, sum_tail;
 
-	while (i <= 98)
+	printf("1");
+
+	for (counter = 2; counter < 93; counter++) /* will still print */
 	{
-		if (f1o > 0)
-			printf("%lu", f1o);
-		initial0s = numLength(mx) - 1 - numLength(f1);
-		while (f1o > 0 && initial0s > 0)
-		{
-			printf("%i", 0);
-			initial0s--;
-		}
-		printf("%lu", f1);
-
-		tmp = (f1 + f2) % mx;
-		tmpo = f1o + f2o + (f1 + f2) / mx;
-		f1 = f2;
-		f1o = f2o;
-		f2 = tmp;
-		f2o = tmpo;
-
-		if (i != 98)
-			printf(", ");
-		else
-			printf('\n');
-		i++;
+		sum = a + b;
+		a = b;
+		b = sum;
+		printf(", %lu", sum);
 	}
+
+	a_head = a / 1000000000; /* break larger num into 2 parts */
+	a_tail = a % 1000000000;
+	b_head = b / 1000000000;
+	b_tail = b % 1000000000;
+
+	for (; counter < 99; counter++)
+	{
+		overflow = (a_tail + b_tail) / 1000000000;
+		sum_tail = (a_tail + b_tail) - (1000000000 * overflow);
+		sum_head = (a_head + b_head) + overflow;
+
+		printf(", %lu%lu", sum_head, sum_tail);
+
+		a_head = b_head;
+		a_tail = b_tail;
+		b_head = sum_head;
+		b_tail = sum_tail;
+	}
+
+	printf("\n");
+
 	return (0);
 }
