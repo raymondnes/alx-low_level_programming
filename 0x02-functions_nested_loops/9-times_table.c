@@ -40,7 +40,7 @@ void times_table(void)
 				}
 			}
 		}
-		_putchat('\n');
+		_putchar('\n');
 	}
 }
 
