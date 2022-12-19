@@ -4,7 +4,7 @@
 /**
   * _puts - prints a string, to stdout
   * @str: value to be evaluated
-  * Return: No.
+  * Return: Not.
   */
 void _puts(char *str)
 {
