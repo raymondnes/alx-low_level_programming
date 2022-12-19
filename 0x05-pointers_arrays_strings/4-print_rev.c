@@ -14,7 +14,7 @@ void print_rev(char *s)
 	}
 	for (live = live - 1; live >= 0; live--)
 	{
-		putchar(s[live]);
+		_putchar(s[live]);
 	}
 	putchar('\n');
 }
