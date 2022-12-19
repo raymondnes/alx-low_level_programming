@@ -3,7 +3,7 @@
 
 /**
   * _puts - prints a string, to stdout
-  * @str: value to be evaluated
+  * @str: value to be evaluated in the compiler
   * Return: Not.
   */
 void _puts(char *str)
